@@ -1,0 +1,21 @@
+name = "eink-calendar-relay"
+main = "worker.js"
+compatibility_date = "2026-09-18"
+
+# Refresh the Google snapshot every 5 minutes so device requests are answered
+# from KV instead of waiting on Google Apps Script.
+[triggers]
+crons = ["*/5 * * * *"]
+
+# Create the namespace with `npx wrangler kv namespace create EINK_CACHE`
+# and paste the returned id here.
+[[kv_namespaces]]
+binding = "EINK_CACHE"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# Do not put real values in this file or commit a populated wrangler.toml.
+# Set DEVICE_KEY as a Wrangler secret and GOOGLE_API_URL as a private variable
+# (or keep configuring both in the Cloudflare Dashboard):
+#
+# DEVICE_KEY     = 64-character random hexadecimal value
+# GOOGLE_API_URL = deployed Google Apps Script Web App URL

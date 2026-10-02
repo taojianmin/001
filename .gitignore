@@ -1,0 +1,34 @@
+# Local device credentials and backups
+api_config.h
+api_config.h.*
+!api_config.example.h
+*.bak
+.env
+.env.*
+!.env.example
+relay.env
+wrangler.toml
+.dev.vars
+.dev.vars.*
+.wrangler/
+.clasp.json
+.clasprc.json
+
+# Build outputs can embed device credentials
+build/
+build*/
+release/
+*.bin
+*.elf
+*.map
+*.zip
+
+# Runtime state and personal calendar data
+__pycache__/
+*.pyc
+*.log
+*.pid
+*snapshot*.json
+node_modules/
+.DS_Store
+Thumbs.db

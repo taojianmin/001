@@ -1,0 +1,8 @@
+{
+  "name": "eink-calendar-relay",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node worker.test.mjs"
+  }
+}
